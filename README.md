@@ -19,4 +19,12 @@ Launch instance from AWS console:
 6.	Click on “Review & Launch” and then Launch.
 7.	This instance will be used to create the templates.
 
+Run Packer template:
+1. From command line, type "packer validate AWS_Instance.json".
+2. This should result in a message saying "Template validated successfully".
+3. Now run the command "packer build \
+    -var 'aws_access_key=YOUR ACCESS KEY' \
+    -var 'aws_secret_key=YOUR SECRET KEY' \
+    AWS_Instance.json".
+4. Once this is done, you should have an instance in the Amazon AWS.
 
